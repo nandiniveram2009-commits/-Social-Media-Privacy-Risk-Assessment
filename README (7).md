@@ -135,14 +135,7 @@ SM-PRAF is engineered around core privacy principles:
 Data Minimization: No PII (phone numbers, home addresses, real names) is ever stored in the database.
 Purpose Limitation: Data is used exclusively for risk calculation and educational feedback.
 Privacy by Default: Zero tracking or active profiling of real individuals.
-## Usage
-# Start backend API server
-uvicorn backend.app:app --reload --host 127.0.0.1 --port 8000
 
-# Start frontend static server (in a separate terminal)
-python -m http.server 3000 --directory frontend
-
-# Access application at http://localhost:3000/assessment.html
 
  
 
