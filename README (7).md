@@ -136,11 +136,16 @@ Data Minimization: No PII (phone numbers, home addresses, real names) is ever st
 Purpose Limitation: Data is used exclusively for risk calculation and educational feedback.
 Privacy by Default: Zero tracking or active profiling of real individuals.
 ## Usage
+# Start backend API server
+uvicorn backend.app:app --reload --host 127.0.0.1 --port 8000
 
+# Start frontend static server (in a separate terminal)
+python -m http.server 3000 --directory frontend
 
-## API documentation 
+# Access application at http://localhost:3000/assessment.html
 
-The FastAPI backend automatically generates interactive API documentation via Swagger UI. Once the backend is running
+ 
+
 ## Testing 
 
 Automated unit and integration tests are executed using pytest:
@@ -174,15 +179,6 @@ Advanced OSINT threat emulation guides.
 Mastery of privacy-by-design and data minimization engineering.
 Proficiency in designing scoring algorithms and heuristic risk engines.
 Full-stack development experience utilizing FastAPI, Tailwind CSS, and Chart.js.
-## Disclaimer 
-
-This project is designed for defensive cybersecurity and privacy education. It uses synthetic or voluntarily provided assessment responses and does not scrape, track, or profile real social-media users.
-## Author
-
-* **GitHub:** [nandiniveram2009](https://github.com)
-* **LinkedIn:** [Nandini Verma](https://linkedin.com)
-
-
 
 ## Risk scoring 
 
@@ -192,18 +188,21 @@ Overall risk is calculated using weighted category aggregations normalized to a 
 21–40: MODERATE (Minor exposure vulnerabilities)
 41–70: HIGH (Significant attack surface)
 71–100: CRITICAL (Immediate risk of exploitation or compromise)
-## API documentation 
 
-The FastAPI backend automatically generates interactive API documentation via Swagger UI. Once the backend is running
-## Usage
+#API Documentation
 
+The FastAPI backend automatically generates interactive API documentation via Swagger UI. Once the backend is running, navigate to:
+http://localhost:8000/docs
 
-## API documentation 
-
-The FastAPI backend automatically generates interactive API documentation via Swagger UI. Once the backend is running
 ## Limitations 
 
 Evaluations rely on self-reported user posture rather than direct API inspection.
 
 Risk weights represent educational assumptions and should be customized for enterprise threat landscapes.
+## Disclaimer 
 
+This project is designed for defensive cybersecurity and privacy education. It uses synthetic or voluntarily provided assessment responses and does not scrape, track, or profile real social-media users.
+## Author
+
+* **GitHub:** [nandiniveram2009](https://github.com)
+* **LinkedIn:** [Nandini Verma](https://linkedin.com)
